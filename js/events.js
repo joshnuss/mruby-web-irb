@@ -102,7 +102,9 @@ var history = [], history_index = 0;
 
     var set_command = function(cmd) {
       editor.getSession().setValue(cmd);
+      editor.getSelection().moveCursorFileEnd();
       resize_textarea(editor, '#editor');
+      
     };
 
     var resize_textarea = function(editor, selector) {
